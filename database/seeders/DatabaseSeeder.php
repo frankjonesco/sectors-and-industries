@@ -26,7 +26,9 @@ class DatabaseSeeder extends Seeder
             IndustrySeeder::class,
             CompanySeeder::class,
             IndustrySectorSeeder::class,
-            CompanyIndustrySeeder::class
+            CompanyIndustrySeeder::class,
+            SectorMapSeeder::class,
+            IndustryMapSeeder::class
         ]);
         
 

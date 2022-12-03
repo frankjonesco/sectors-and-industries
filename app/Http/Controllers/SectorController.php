@@ -12,7 +12,7 @@ class SectorController extends Controller
     public function index(){
         $sector = new Sector();
         // dd($sector->companies);
-        dd(Sector::first()->industries);
+        // dd(Sector::first()->industries);
         $sectors = Sector::get();
         return view('sectors', [
             'sectors' => $sectors,

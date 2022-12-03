@@ -12,7 +12,8 @@ class Sector extends Model
     use HasFactory;
 
     public function industries(){
-        return $this->hasManyThrough(Industry::class, IndustrySector::class);
+        // return $this->hasManyThrough(Industry::class, SectorMap::class, 'industry_id', 'idp');
+        return $this->hasMany(SectorMap::class, 'sector_id')->select('*')->leftjoin('industries','industries.id','=','sector_maps.industry_id');
     }
 
     public function companies(){

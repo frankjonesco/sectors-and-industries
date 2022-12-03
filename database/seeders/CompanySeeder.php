@@ -1,0 +1,28 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\Company;
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+class CompanySeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $companies = [
+            ['name' => 'GSK'],
+            ['name' => 'Thales'],
+            ['name' => 'TFL']
+        ];
+
+        foreach($companies as $company){
+            Company::create($company);
+        }
+    }
+}

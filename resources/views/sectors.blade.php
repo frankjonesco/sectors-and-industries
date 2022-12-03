@@ -19,11 +19,7 @@
                 @endforeach
             </td>
             <td style="padding:1rem; background:#ddd;">
-                @foreach($sector->industries as $industry)
-                    @foreach($industry->companies as $company)
-                        {{$company->name}}<br>
-                    @endforeach
-                @endforeach
+                {{-- {{count($sector->companies)}} --}}
             </td>
         </tr>
     @endforeach

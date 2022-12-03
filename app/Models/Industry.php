@@ -14,7 +14,7 @@ class Industry extends Model
     use HasFactory;
 
     public function companies(){
-        return $this->belongsToMany(Company::class, 'company_industry_sector', 'industry_sector_id', 'company_id');
+        return $this->belongsToMany(Company::class, 'company_industry_sector', 'sector_id', 'industry_id');
     }
 
     

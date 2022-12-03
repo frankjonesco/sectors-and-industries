@@ -12,31 +12,17 @@ class Sector extends Model
     use HasFactory;
 
     public function industries(){
-        return $this->belongsToMany(Industry::class)->withPivot(['id', 'hex']);
+        return $this->hasManyThrough(Industry::class, IndustrySector::class);
     }
 
     public function companies(){
-        return $this->belongsToMany(Company::class, 'company_industry_sector', 'industry_sector_id', 'company_id');
+        return $this->hasManyThrough(Company::class, IndustrySector::class);
     }
 
 
 
-    public function getTest(){
+    public function getIndustries(){
 
-        // $industries = DB::table('salaries')
-        // ->selectRaw('companies.name as company_name, avg(salary) as avg_salary, count(*) as people_count')
-        // ->join('companies', 'salaries.company_id', '=', 'companies.id')
-        // ->groupBy('companies.id')
-        // ->orderByDesc('avg_salary')
-        // ->get();
-
-        $industries = DB::table('industry_sector')
-        
-
-        ->get();
-
-
-        return $industries;
     }
 
 

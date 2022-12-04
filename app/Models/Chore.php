@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Chore extends Model
 {
     use HasFactory;
+
+    
 }

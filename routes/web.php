@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomController;
+use App\Http\Controllers\SiteController;
 use App\Http\Controllers\ChoreController;
 use App\Http\Controllers\PersonController;
 
@@ -17,10 +18,7 @@ use App\Http\Controllers\PersonController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [SiteController::class, 'index']);
 Route::get('/rooms', [RoomController::class, 'index']);
 Route::get('/chores', [ChoreController::class, 'index']);
 Route::get('/persons', [PersonController::class, 'index']);

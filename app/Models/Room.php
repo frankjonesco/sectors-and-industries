@@ -10,6 +10,14 @@ class Room extends Model
     use HasFactory;
 
     public function chores(){
-        return $this->belongsToMany(Chore::class);
+
+        return $this->hasManyThrough(
+            Chore::class,
+            Map::class,
+            'room_id', // Foreign key on the Maps table...
+            'id', // Foreign key on the Chores table...
+            null,
+            'chore_id'
+        );
     }
 }

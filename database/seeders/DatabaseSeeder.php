@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
             RoomSeeder::class,
             ChoreSeeder::class,
             PersonSeeder::class,
-            ChoreRoomSeeder::class
+            MapSeeder::class
         ]);
         
 

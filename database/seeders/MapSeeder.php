@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\RoomChorePerson;
+use App\Models\Map;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class RoomChorePersonSeeder extends Seeder
+class MapSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,55 +18,65 @@ class RoomChorePersonSeeder extends Seeder
         $pivots = [
             // Living Room
             [
-                'room_chore_id' => 1, 
+                'room_id' => 1, 
+                'chore_id' => 1,
                 'person_id' => 1
             ],
             [
-                'room_chore_id' => 2, 
+                'room_id' => 1, 
+                'chore_id' => 1,
                 'person_id' => 1
             ],
 
             // Kitchen
             [
-                'room_chore_id' => 3,
+                'room_id' => 2, 
+                'chore_id' => 2,
+                'person_id' => 2
+            ],
+            [
+                'room_id' => 2, 
+                'chore_id' => 3,
                 'person_id' => 1
             ],
             [
-                'room_chore_id' => 4,
-                'person_id' => 1
-            ],
-            [
-                'room_chore_id' => 5,
+                'room_id' => 2, 
+                'chore_id' => 5,
                 'person_id' => 2
             ],
 
             // Bathroom
             [
-                'room_chore_id' => 6,
+                'room_id' => 3, 
+                'chore_id' => 2,
                 'person_id' => 1
             ],
             [
-                'room_chore_id' => 7,
+                'room_id' => 3, 
+                'chore_id' => 4,
                 'person_id' => 3
             ],
             [
-                'room_chore_id' => 8,
+                'room_id' => 3, 
+                'chore_id' => 5,
                 'person_id' => 1
             ],
 
             // Hallway
             [
-                'room_chore_id' => 9,
+                'room_id' => 4, 
+                'chore_id' => 1,
                 'person_id' => 3
             ],
             [
-                'room_chore_id' => 10,
+                'room_id' => 4, 
+                'chore_id' => 5,
                 'person_id' => 3
             ]
         ];
 
         foreach($pivots as $pivot){
-            RoomChorePerson::insert($pivot);
+            Map::insert($pivot);
         }
 
 

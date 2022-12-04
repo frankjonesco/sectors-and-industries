@@ -24,7 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RoomSeeder::class,
             ChoreSeeder::class,
-            PersonSeeder::class
+            PersonSeeder::class,
+            ChoreRoomSeeder::class
         ]);
         
 

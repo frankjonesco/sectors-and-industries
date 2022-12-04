@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class RoomChorePerson extends Model
 {
     use HasFactory;
 
-    public function chores(){
-        return $this->belongsToMany(Chore::class);
-    }
+    protected $table = 'room_chore_persons';
 }

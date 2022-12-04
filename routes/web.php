@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SectorController;
-use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\IndustryController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\ChoreController;
+use App\Http\Controllers\PersonController;
+
 
 /*
 |--------------------------------------------------------------------------

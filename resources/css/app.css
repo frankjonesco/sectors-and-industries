@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    h1{
+        @apply text-4xl;
+        @apply font-bold;
+        @apply my-4;
+    }
+
+    /* Tables */
+
+    table{
+        @apply w-1/4;
+        @apply text-sm;
+        @apply text-left;
+        @apply text-gray-500;
+        @apply mb-10;
+    }
+
+    thead{
+        @apply text-xs;
+        @apply text-gray-100;
+        @apply uppercase;
+        @apply bg-rose-800;
+
+    }
+
+    td{
+        @apply border-b;
+        @apply border-b-red-900;
+    }
+
+    th,td{
+        @apply p-2.5;
+    }
+
+
+
+
+}

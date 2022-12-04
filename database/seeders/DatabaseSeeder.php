@@ -22,13 +22,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            SectorSeeder::class,
-            IndustrySeeder::class,
-            CompanySeeder::class,
-            IndustrySectorSeeder::class,
-            CompanyIndustrySeeder::class,
-            SectorMapSeeder::class,
-            IndustryMapSeeder::class
+            CategorySeeder::class,
+            SubcategorySeeder::class,
+            FoodSeeder::class
         ]);
         
 

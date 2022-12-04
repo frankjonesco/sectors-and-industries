@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('industry_sector', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('hex', 11);
-            $table->foreignId('sector_id')->onDelete('cascade');
-            $table->foreignId('industry_id')->onDelete('cascade');
+            $table->string('name');
         });
     }
 
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('industry_sector');
+        Schema::dropIfExists('categories');
     }
 };

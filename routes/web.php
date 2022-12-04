@@ -20,6 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/sectors', [SectorController::class, 'index']);
-Route::get('/industries', [IndustryController::class, 'index']);
-Route::get('/companies', [CompanyController::class, 'index']);
+Route::get('/rooms', [RoomController::class, 'index']);
+Route::get('/chores', [ChoreController::class, 'index']);
+Route::get('/persons', [PersonController::class, 'index']);

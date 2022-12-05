@@ -35,7 +35,8 @@
         @apply font-bold;
         @apply bg-amber-500;
         @apply rounded-lg;
-        @apply border-y-2;
+        @apply border-y;
+        @apply border-zinc-600
     }
 
     td{

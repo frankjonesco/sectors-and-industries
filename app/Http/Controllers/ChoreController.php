@@ -8,9 +8,10 @@ use Illuminate\Http\Request;
 
 class ChoreController extends Controller
 {
+    // Show all chores
     public function index(){
         return view('chores.index', [
-            'rooms' => Chore::get()
+            'chores' => Chore::get()
         ]);
     }
 

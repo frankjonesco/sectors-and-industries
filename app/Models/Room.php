@@ -18,7 +18,7 @@ class Room extends Model
         ->withPivot('id', 'room_id', 'chore_id', 'person_id');
     }
 
-    public function chore_types(){
+    public function grouped_chores(){
         return $this->belongsToMany(
             Chore::class,
             'maps'
@@ -32,5 +32,12 @@ class Room extends Model
             'maps'
         )
         ->withPivot('id', 'room_id', 'chore_id', 'person_id');
+    }
+
+    public function grouped_persons(){
+        return $this->belongsToMany(
+            Person::class,
+            'maps'
+        )->distinct();
     }
 }

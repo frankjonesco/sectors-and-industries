@@ -7,22 +7,20 @@ use App\Models\Chore;
 use Illuminate\Http\Request;
 
 class RoomController extends Controller
-{
+{   
+    // Show all rooms
     public function index(){
-
-        $rooms = Room::with('chores')->get();
-
-        dd($rooms);
-
         return view('rooms.index', [
-            'rooms' => $rooms
+            'rooms' => Room::get()
         ]);
     }
 
+    // Show single room
     public function show(Room $room){
         return view('rooms.show', [
             'room' => $room,
             'chores' => $room->chores->groupBy('id')
         ]);
     }
+
 }

@@ -10,13 +10,19 @@ class RoomController extends Controller
 {
     public function index(){
 
-        $room = Room::with('chores')->findOrFail(2);
+        $rooms = Room::with('chores')->get();
 
-        dd($room->chores);
+        // $persons = $room->persons;
+        // $persons = $persons->groupBy('name');
+
+        // dd($persons);
+        // foreach($persons as $person){
+        //     echo $person.', ';
+        // }
         
-
+        // dd($rooms);
         return view('rooms.index', [
-            'rooms' => Room::get()
+            'rooms' => $rooms
         ]);
     }
 }

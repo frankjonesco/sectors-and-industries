@@ -72,16 +72,16 @@
                 <tr>
                     <td>Number of Persons</td>
                     <td>
-                        {{-- {{count($chore->persons)}} --}}
+                        {{count($chore->persons)}}
                     </td>
                 </tr>
 
                 <tr>
                     <td>Persons</td>
                     <td>
-                        {{-- @foreach($chore->persons as $person)
+                        @foreach($chore->persons as $person)
                             {{$person->name}}<br>
-                        @endforeach --}}
+                        @endforeach
                     </td>
                 </tr>
 

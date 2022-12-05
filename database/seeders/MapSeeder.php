@@ -18,60 +18,60 @@ class MapSeeder extends Seeder
         $pivots = [
             // Living Room
             [
-                'room_id' => 1, 
-                'chore_id' => 1,
-                'person_id' => 1
+                'room_id' => 1, // Living room
+                'chore_id' => 1, // Vacuum
+                'person_id' => 1 // David
             ],
             [
-                'room_id' => 1, 
-                'chore_id' => 1,
-                'person_id' => 1
+                'room_id' => 1, // Living room
+                'chore_id' => 5, // Clean windows
+                'person_id' => 1 // David
             ],
 
             // Kitchen
             [
-                'room_id' => 2, 
-                'chore_id' => 2,
-                'person_id' => 2
+                'room_id' => 2, // Kitchen
+                'chore_id' => 2, // Mop floor
+                'person_id' => 2 // Jennifer
             ],
             [
-                'room_id' => 2, 
-                'chore_id' => 3,
-                'person_id' => 1
+                'room_id' => 2, // Kitchen
+                'chore_id' => 3, // Wash dishes
+                'person_id' => 1 // David
             ],
             [
-                'room_id' => 2, 
-                'chore_id' => 5,
-                'person_id' => 2
+                'room_id' => 2, // Kitchen
+                'chore_id' => 5, // Clean windows
+                'person_id' => 2 // Jennifer
             ],
 
             // Bathroom
             [
-                'room_id' => 3, 
-                'chore_id' => 2,
-                'person_id' => 1
+                'room_id' => 3, // Bathroom
+                'chore_id' => 2, // Mop floor
+                'person_id' => 1 // David
             ],
             [
-                'room_id' => 3, 
-                'chore_id' => 4,
-                'person_id' => 3
+                'room_id' => 3, // Bathroom
+                'chore_id' => 4, // Clean toilet
+                'person_id' => 3 // Michael
             ],
             [
-                'room_id' => 3, 
-                'chore_id' => 5,
-                'person_id' => 1
+                'room_id' => 3, // Bathroom
+                'chore_id' => 5, // Clean windows
+                'person_id' => 1 // David
             ],
 
             // Hallway
             [
-                'room_id' => 4, 
-                'chore_id' => 1,
-                'person_id' => 3
+                'room_id' => 4, // Hallway
+                'chore_id' => 1, // Vacuum
+                'person_id' => 3 // Michael
             ],
             [
-                'room_id' => 4, 
-                'chore_id' => 5,
-                'person_id' => 3
+                'room_id' => 4, // Hallway
+                'chore_id' => 5, // Clean windows
+                'person_id' => 3 // Michael
             ]
         ];
 

@@ -21,7 +21,8 @@ class RoomController extends Controller
 
     public function show(Room $room){
         return view('rooms.show', [
-            'room' => $room
+            'room' => $room,
+            'chores' => $room->chores->groupBy('id')
         ]);
     }
 }

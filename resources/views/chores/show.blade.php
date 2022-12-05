@@ -7,7 +7,8 @@
         <thead>
             <tr>
                 <th>Persons</th>
-                <th></th>
+                <th>Room</th>
+                <th>Chore</th>
             </tr>
         </thead>
         @foreach($chore->persons as $person)
@@ -18,8 +19,9 @@
                     </a>
                 </td>
                 <td>
-                    {{-- {{count($chore->persons)}} --}}
+                    {{$room->name}}
                 </td>
+                <td>{{$chore->name}}</td>
             </tr>
         @endforeach
     </table>

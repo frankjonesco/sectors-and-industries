@@ -6,7 +6,8 @@
         <thead>
             <tr>
                 <th>Room</th>
-                <th>No. of chores</th>
+                <th>Chore Types</th>
+                <th>Assigned to</th>
             </tr>
         </thead>
         @foreach($rooms as $room)
@@ -17,7 +18,15 @@
                     </a>
                 </td>
                 <td>
-                    {{count($room->chores)}}
+                    {{count($room->chore_types)}}
+                </td>
+                <td>
+                    {{count($room->persons)}}
+                    @if(count($room->persons) === 1)
+                        person
+                    @else
+                        people
+                    @endif
                 </td>
             </tr>
         @endforeach

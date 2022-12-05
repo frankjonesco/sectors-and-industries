@@ -6,22 +6,35 @@
         <thead>
             <tr>
                 <th>Chores</th>
+                <th>Room</th>
                 <th>No. of persons</th>
             </tr>
         </thead>
-        @foreach($room->chores as $chore)
-            {{-- {{dd($chore->pivot)}} --}}
+        {{-- {{dd($room->chores->groupBy('name'))}} --}}
+        @php 
+            $i = 0;
+        @endphp
+        
+        @foreach($chores as $chore)
             <tr>
                 <td>
-                    <a href="/chores/{{$chore->pivot->id}}">
-                        {{$chore->name}}
+                    <a href="/chores/{{$chore[0]->pivot->id}}">
+                        {{$chore[0]->name}}
                     </a>
                 </td>
                 <td>
-                    {{count($chore->persons)}}
+                    {{$room->name}}
+                </td>
+                <td>
+                    {{count($chore[0]->persons)}}
                 </td>
             </tr>
+            @php 
+                $i++;
+            @endphp
+
         @endforeach
+
     </table>
 
 </x-layout>

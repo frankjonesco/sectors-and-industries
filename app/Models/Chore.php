@@ -21,6 +21,16 @@ class Chore extends Model
         return $this->belongsToMany(
             Person::class,
             'maps'
-        )->withPivot('id', 'room_id', 'chore_id', 'person_id')->wherePivot('room_id', $this->pivot->room_id);
+        )->withPivot('id', 'room_id', 'chore_id', 'person_id')
+        ->wherePivot('room_id', $this->pivot->room_id);
+    }
+
+    // Relationship to room
+    public function room(){
+        return $this->belongsToMany(
+            Room::class,
+            'maps'
+        )->withPivot('id', 'room_id', 'chore_id', 'person_id')
+        ->wherePivot('room_id', $this->pivot->room_id);
     }
 }

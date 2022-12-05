@@ -30,11 +30,12 @@
 
     thead{
         @apply text-xs;
-        @apply text-gray-100;
+        @apply text-slate-900;
         @apply uppercase;
         @apply font-bold;
-        @apply bg-zinc-800;
-
+        @apply bg-amber-500;
+        @apply rounded-lg;
+        @apply border-y-2;
     }
 
     td{
@@ -51,7 +52,9 @@
 
     #topNav{
         @apply bg-amber-600;
-        @apply rounded-lg; 
+        @apply rounded-lg;
+        @apply border-2;
+        @apply border-zinc-200;
         @apply text-center;
     }
 

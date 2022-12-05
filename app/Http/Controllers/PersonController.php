@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 
 class PersonController extends Controller
 {
+    // Show all persons
     public function index(){
         return view('persons.index', [
-            'rooms' => Person::get()
+            'persons' => Person::get()
         ]);
     }
 }

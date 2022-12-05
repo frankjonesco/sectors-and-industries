@@ -15,7 +15,7 @@ class Chore extends Model
         return $this->belongsTo(Map::class);
     }
 
-    // Relationship to room
+    // Relationship to this chore's room
     public function room(){
         return $this->belongsToMany(
             Room::class,
@@ -24,6 +24,7 @@ class Chore extends Model
         ->wherePivot('room_id', $this->pivot->room_id);
     }
 
+    // Relationship to rooms (grouped)
     public function grouped_rooms(){
         return $this->belongsToMany(
             Room::class,
@@ -31,8 +32,7 @@ class Chore extends Model
         )->distinct();
     }
 
-
-    // Relationship to persons
+    // Relationship to persons with pivot (ungrouped)
     public function persons(){
         return $this->belongsToMany(
             Person::class,
@@ -40,7 +40,8 @@ class Chore extends Model
         )->withPivot('id', 'room_id', 'chore_id', 'person_id')
         ->wherePivot('room_id', $this->pivot->room_id);
     }
-
+    
+    // Relationship to persons (grouped)
     public function grouped_persons(){
         return $this->belongsToMany(
             Person::class,

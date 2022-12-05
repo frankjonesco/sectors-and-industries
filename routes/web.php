@@ -18,7 +18,35 @@ use App\Http\Controllers\PersonController;
 |
 */
 
+// Site index
 Route::get('/', [SiteController::class, 'index']);
+
+//////////////
+
+
+// ROOMS
+
+// Show all rooms
 Route::get('/rooms', [RoomController::class, 'index']);
+
+// Show single room
+Route::get('/rooms/{room}', [RoomController::class, 'show']);
+
+//////////////
+
+
+// CHORES
+
+// Show all chores
 Route::get('/chores', [ChoreController::class, 'index']);
+
+// Show single chore
+Route::get('/chores/{map}', [ChoreController::class, 'show']);
+
+//////////////
+
+
+// PERSONS
+
+// Show all persons
 Route::get('/persons', [PersonController::class, 'index']);

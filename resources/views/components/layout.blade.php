@@ -9,7 +9,7 @@
     
     <div class="w-1/2 h-screen mx-auto my-12">
         <x-navbar />
-        <div class="mx-auto my-6 p-6 bg-zinc-200 rounded-lg text-center">
+        <div class="mx-auto my-6 px-12 py-6 bg-zinc-200 rounded-lg text-center">
             <main>
                 {{$slot}}
             </main>

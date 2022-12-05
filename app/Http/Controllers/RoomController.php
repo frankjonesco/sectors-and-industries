@@ -12,17 +12,16 @@ class RoomController extends Controller
 
         $rooms = Room::with('chores')->get();
 
-        // $persons = $room->persons;
-        // $persons = $persons->groupBy('name');
+        dd($rooms);
 
-        // dd($persons);
-        // foreach($persons as $person){
-        //     echo $person.', ';
-        // }
-        
-        // dd($rooms);
         return view('rooms.index', [
             'rooms' => $rooms
+        ]);
+    }
+
+    public function show(Room $room){
+        return view('rooms.show', [
+            'room' => $room
         ]);
     }
 }

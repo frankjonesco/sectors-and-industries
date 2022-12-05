@@ -7,7 +7,15 @@
     h1{
         @apply text-4xl;
         @apply font-bold;
-        @apply my-4;
+        @apply mt-4;
+        @apply mb-8
+    }
+
+    /* Links */
+    a{
+        @apply text-blue-700;
+        @apply hover:underline;
+        @apply hover:underline-offset-2;
     }
 
     /* Tables */
@@ -24,7 +32,8 @@
         @apply text-xs;
         @apply text-gray-100;
         @apply uppercase;
-        @apply bg-rose-800;
+        @apply font-bold;
+        @apply bg-zinc-800;
 
     }
 
@@ -34,7 +43,8 @@
     }
 
     th,td{
-        @apply p-2.5;
+        @apply p-3.5;
+        @apply px-5
     }
 
     /* Navigation */
@@ -59,7 +69,7 @@
         @apply hover:bg-zinc-300;
         @apply hover:border-slate-700;
         @apply hover:text-slate-800;
-
+        @apply hover:no-underline;
     }
 
 

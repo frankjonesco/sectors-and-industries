@@ -9,15 +9,15 @@ class Room extends Model
 {
     use HasFactory;
 
-    // Relationship: room to chores
+    // Relationship to chores
     public function chores(){
         return $this->belongsToMany(
             Chore::class,
             'maps'
-        )
-        ->withPivot('id', 'room_id', 'chore_id', 'person_id');
+        )->withPivot('id', 'room_id', 'chore_id', 'person_id');
     }
 
+    // Relationship to chores (grouped)
     public function grouped_chores(){
         return $this->belongsToMany(
             Chore::class,
@@ -25,15 +25,15 @@ class Room extends Model
         )->distinct();
     }
 
-    // Relationship: room to persons
+    // Relationship to persons
     public function persons(){
         return $this->belongsToMany(
             Person::class,
             'maps'
-        )
-        ->withPivot('id', 'room_id', 'chore_id', 'person_id');
+        )->withPivot('id', 'room_id', 'chore_id', 'person_id');
     }
 
+    // Relationship to persons (grouped)
     public function grouped_persons(){
         return $this->belongsToMany(
             Person::class,

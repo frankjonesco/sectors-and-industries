@@ -19,10 +19,15 @@
                 </td>
                 <td>
                     {{count($room->grouped_chores)}}
+                    @if(count($room->grouped_chores) === 1)
+                        chore
+                    @else
+                        chores
+                    @endif
                 </td>
                 <td>
-                    {{count($room->persons)}}
-                    @if(count($room->persons) === 1)
+                    {{count($room->grouped_chores)}}
+                    @if(count($room->grouped_chores) === 1)
                         person
                     @else
                         people

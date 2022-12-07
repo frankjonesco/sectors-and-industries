@@ -52,7 +52,7 @@
     /* Tables */
 
     table{
-        @apply w-1/4;
+        @apply w-full;
         @apply text-sm;
         @apply text-left;
         @apply text-gray-500;

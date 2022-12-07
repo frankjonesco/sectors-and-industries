@@ -2,7 +2,8 @@
     
     <h1>Room: {{$room->name}}</h1> 
     
-    <table class="w-full">
+    <table>
+
         <thead>
             <tr>
                 <th>Chores</th>
@@ -10,7 +11,7 @@
                 <th>No. of persons</th>
             </tr>
         </thead>
-        {{-- {{dd($room->chores->groupBy('name'))}} --}}
+
         @php 
             $i = 0;
         @endphp
@@ -29,6 +30,7 @@
                     {{count($chore[0]->persons)}}
                 </td>
             </tr>
+            
             @php 
                 $i++;
             @endphp

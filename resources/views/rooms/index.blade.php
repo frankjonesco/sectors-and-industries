@@ -2,7 +2,7 @@
     
     <h1>Rooms</h1>
 
-    <table class="w-full">
+    <table>
 
         <thead>
             <tr>

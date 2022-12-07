@@ -2,8 +2,8 @@
     
     <h1>Welcome to the chore list</h1> 
     
-    <table class="w-full">
-        
+    <table>
+
         <thead>
             <tr>
                 <th>Room</th>

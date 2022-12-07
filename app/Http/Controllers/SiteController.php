@@ -16,7 +16,6 @@ class SiteController extends Controller
             $rooms[$key]->persons = $room->persons->groupBy('name');
         }
 
-
         return view('index', [
             'rooms' => $rooms
         ]);

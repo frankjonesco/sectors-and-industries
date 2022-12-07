@@ -1,11 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RoomController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\RoomController;
 use App\Http\Controllers\ChoreController;
 use App\Http\Controllers\PersonController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +16,8 @@ use App\Http\Controllers\PersonController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// SITE
 
 // Site index
 Route::get('/', [SiteController::class, 'index']);
@@ -50,3 +51,5 @@ Route::get('/chores/{map}', [ChoreController::class, 'show']);
 
 // Show all persons
 Route::get('/persons', [PersonController::class, 'index']);
+
+//////////////

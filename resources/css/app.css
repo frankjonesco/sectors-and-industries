@@ -4,6 +4,8 @@
 
 @layer base {
 
+    /* Text */
+
     h1{
         @apply text-4xl;
         @apply font-bold;
@@ -75,8 +77,5 @@
         @apply hover:text-slate-800;
         @apply hover:no-underline;
     }
-
-
-
-
+    
 }

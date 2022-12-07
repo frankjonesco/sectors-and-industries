@@ -4,6 +4,32 @@
 
 @layer base {
 
+    /* Body */
+
+    body{
+        @apply bg-sky-900;
+    }
+
+    .screen{
+        @apply w-1/2;
+        @apply h-screen;
+        @apply mx-auto;
+        @apply my-12;
+    }
+
+    .container{
+        @apply mx-auto;
+        @apply my-6;
+        @apply px-12;
+        @apply py-6;
+        @apply bg-zinc-200;
+        @apply rounded-lg;
+        @apply text-center;
+        @apply border-2;
+        @apply border-zinc-900;
+    }
+    
+
     /* Text */
 
     h1{
@@ -54,7 +80,7 @@
         @apply px-5
     }
 
-    
+
     /* Navigation */
 
     #topNav{

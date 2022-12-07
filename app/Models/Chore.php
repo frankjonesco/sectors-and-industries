@@ -85,4 +85,20 @@ class Chore extends Model
         );
     }
 
+    /**
+     * Get the room's chore persons labelled count.
+     *
+     * @return \Illuminate\Database\Eloquent\Casts\Attribute
+     */
+
+    protected function labelledRoomChorePersonCount(): Attribute
+    {
+        $count = count($this->persons);
+        $label = ($count === 1 ? 'person' : 'people');
+
+        return Attribute::make(
+            get: fn ($value) => $count.' '.$label,
+        );
+    }
+
 }

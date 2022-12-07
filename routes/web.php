@@ -33,6 +33,9 @@ Route::get('/rooms', [RoomController::class, 'index']);
 // Show single room
 Route::get('/rooms/{room}', [RoomController::class, 'show']);
 
+// Show a single room's chores
+Route::get('/rooms/{room}/chores/{map}', [RoomController::class, 'showChorePersons']);
+
 //////////////
 
 
@@ -42,7 +45,7 @@ Route::get('/rooms/{room}', [RoomController::class, 'show']);
 Route::get('/chores', [ChoreController::class, 'index']);
 
 // Show single chore
-Route::get('/chores/{map}', [ChoreController::class, 'show']);
+Route::get('/chores/{chore}', [ChoreController::class, 'show']);
 
 //////////////
 

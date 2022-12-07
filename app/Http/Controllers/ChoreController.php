@@ -15,11 +15,9 @@ class ChoreController extends Controller
     }
 
     // Show single chore
-    public function show(Map $map){
+    public function show(Chore $chore){
         return view('chores.show', [
-            'map' => $map,
-            'room' => $map->room,
-            'chore' => $map->chore->first(),
+            'chore' => $chore,
         ]);
     }
 }

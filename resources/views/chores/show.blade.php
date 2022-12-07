@@ -1,29 +1,42 @@
 <x-layout>
     
-    <h1>Room: {{$room->name}}</h1> 
     <h1>Chore: {{$chore->name}}</h1> 
     
     <table>
 
         <thead>
             <tr>
-                <th>Persons</th>
-                <th>Room</th>
                 <th>Chore</th>
+                <th>Persons</th>
+                <th>No. of Rooms</th>
+                <th>Room(s)</th>
             </tr>
         </thead>
 
-        @foreach($chore->persons as $person)
+        @foreach($chore->grouped_persons as $person)
             <tr>
                 <td>
-                    <a href="/persons/{{$person->id}}">
-                        {{$person->name}}
+                    <a href="/chores/{{$chore->id}}">
+                        {{$chore->name}}
                     </a>
                 </td>
                 <td>
-                    {{$room->name}}
+                    {{$person->name}}
                 </td>
-                <td>{{$chore->name}}</td>
+                <td>
+                    {{$person->labelled_chore_room_count}}
+                </td>
+                <td>
+                    <ul>
+                        @foreach($person->grouped_chore_rooms as $room)
+                            <li>
+                                <a href="/rooms/{{$room->id}}">
+                                    {{$room->name}}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </td>
             </tr>
         @endforeach
         

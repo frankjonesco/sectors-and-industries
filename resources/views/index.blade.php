@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :tables="$tables">
     
     <h1>Welcome to the chore list</h1> 
     

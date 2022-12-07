@@ -21,7 +21,9 @@
                     {{$room->id}}
                 </td>
                 <td>
-                    {{$room->name}}
+                    <a href="/rooms/{{$room->id}}">
+                        {{$room->name}}
+                    </a>
                 </td>
                 <td>
                     {{$room->labelled_chore_count}}
@@ -29,7 +31,11 @@
                 <td>
                     <ul>
                         @foreach($room->grouped_chores as $chore)
-                            <li>- {{$chore->name}}</li>
+                            <li>- 
+                                <a href="/chores/{{$chore->id}}">
+                                    {{$chore->name}}
+                                </a>
+                            </li>
                         @endforeach
                     </ul>
                 </td>

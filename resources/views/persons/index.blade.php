@@ -29,7 +29,11 @@
                 <td>
                     <ul>
                         @foreach($person->grouped_rooms as $room)
-                            <li>- {{$room->name}}</li>
+                            <li>- 
+                                <a href="/rooms/{{$room->id}}">
+                                    {{$room->name}}
+                                </a>
+                            </li>
                         @endforeach
                     </ul>
                 </td>
@@ -39,7 +43,11 @@
                 <td>
                     <ul>
                         @foreach($person->grouped_chores as $chore)
-                            <li>- {{$chore->name}}</li>
+                            <li>- 
+                                <a href="/chores/{{$chore->id}}">
+                                    {{$chore->name}}
+                                </a>
+                            </li>
                         @endforeach
                     </ul>
                 </td>

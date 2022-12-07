@@ -16,6 +16,9 @@
                 {{$slot}}
             </main>
         </div>
+        {{-- 
+            <x-db-tables :tables="$tables" /> 
+        --}}
     </div>
 </body>
 </html>

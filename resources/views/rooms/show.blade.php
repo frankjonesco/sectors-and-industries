@@ -6,9 +6,10 @@
 
         <thead>
             <tr>
+                <th>ID</th>
                 <th>Chores</th>
-                <th>Room</th>
                 <th>No. of persons</th>
+                <th>Persons</th>
             </tr>
         </thead>
 
@@ -19,15 +20,24 @@
         @foreach($chores as $chore)
             <tr>
                 <td>
-                    <a href="/chores/{{$chore[0]->pivot->id}}">
+                    {{$chore[0]->id}}
+                </td>
+                <td>
+                    <a href="/rooms/{{$room->id}}/chores/{{$chore[0]->pivot->id}}">
                         {{$chore[0]->name}}
                     </a>
                 </td>
                 <td>
-                    {{$room->name}}
+                    {{count($chore[0]->persons)}}
                 </td>
                 <td>
-                    {{count($chore[0]->persons)}}
+                    <ul>
+                        @foreach($chore[0]->persons as $person)
+                            <li>-
+                                {{$person->name}}
+                            </li>
+                        @endforeach
+                    </ul>
                 </td>
             </tr>
             

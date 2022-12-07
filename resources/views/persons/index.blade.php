@@ -2,13 +2,16 @@
     
     <h1>Persons</h1>
 
-    <table class="w-full">
+    <table>
+
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
                 <th>No. of Rooms</th>
+                <th>Rooms</th>
                 <th>No. of Chores</th>
+                <th>Chores</th>
             </tr>
         </thead>
 
@@ -24,7 +27,21 @@
                     {{count($person->grouped_rooms)}}
                 </td>
                 <td>
+                    <ul>
+                        @foreach($person->grouped_rooms as $room)
+                            <li>- {{$room->name}}</li>
+                        @endforeach
+                    </ul>
+                </td>
+                <td>
                     {{count($person->grouped_chores)}}
+                </td>
+                <td>
+                    <ul>
+                        @foreach($person->grouped_chores as $chore)
+                            <li>- {{$chore->name}}</li>
+                        @endforeach
+                    </ul>
                 </td>
             </tr>
         @endforeach

@@ -27,17 +27,21 @@
                     {{$chore->labelled_room_count}}
                 </td>
                 <td>
-                    @foreach($chore->grouped_rooms as $room)
-                        {{$room->name}}<br>
-                    @endforeach
+                    <ul>
+                        @foreach($chore->grouped_rooms as $room)
+                            <li>- {{$room->name}}</li>
+                        @endforeach
+                    </ul>
                 </td>
                 <td>
                     {{$chore->labelled_person_count}}
                 </td>
                 <td>
-                    @foreach($chore->grouped_persons as $person)
-                        {{$person->name}}<br>
-                    @endforeach
+                    <ul>
+                        @foreach($chore->grouped_persons as $person)
+                            <li>- {{$person->name}}</li>
+                        @endforeach
+                    </ul>
                 </td>
             </tr>
         @endforeach

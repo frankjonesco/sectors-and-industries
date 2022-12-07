@@ -27,19 +27,21 @@
                     {{$room->labelled_chore_count}}
                 </td>
                 <td>
-                    @foreach($room->grouped_chores as $chore)
-                        {{$chore->name}}
-                        <br>
-                    @endforeach
+                    <ul>
+                        @foreach($room->grouped_chores as $chore)
+                            <li>- {{$chore->name}}</li>
+                        @endforeach
+                    </ul>
                 </td>
                 <td>
                     {{$room->labelled_person_count}}
                 </td>
                 <td>
-                    @foreach($room->grouped_persons as $person)
-                        {{$person->name}}
-                        <br>
-                    @endforeach
+                    <ul>
+                        @foreach($room->grouped_persons as $person)
+                            <li>- {{$person->name}}</li>
+                        @endforeach
+                    </ul>
                 </td>
             </tr>
         @endforeach

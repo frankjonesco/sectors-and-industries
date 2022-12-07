@@ -3,6 +3,7 @@
     <h1>Welcome to the chore list</h1> 
     
     <table class="w-full">
+        
         <thead>
             <tr>
                 <th>Room</th>
@@ -10,6 +11,7 @@
                 <th>Assigned to</th>
             </tr>
         </thead>
+
         @foreach($rooms as $room)
             <tr>
                 <td>
@@ -25,6 +27,7 @@
                 </td>
             </tr>
         @endforeach
+
     </table>
 
 </x-layout>

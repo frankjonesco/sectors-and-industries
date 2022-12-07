@@ -3,6 +3,7 @@
     <h1>Rooms</h1>
 
     <table class="w-full">
+
         <thead>
             <tr>
                 <th>ID</th>
@@ -23,19 +24,21 @@
                     {{$room->name}}
                 </td>
                 <td>
-                    {{count($room->grouped_chores)}}
+                    {{$room->labelled_chore_count}}
                 </td>
                 <td>
                     @foreach($room->grouped_chores as $chore)
-                        {{$chore->name}}<br>
+                        {{$chore->name}}
+                        <br>
                     @endforeach
                 </td>
                 <td>
-                    {{count($room->grouped_persons)}}
+                    {{$room->labelled_person_count}}
                 </td>
                 <td>
                     @foreach($room->grouped_persons as $person)
-                        {{$person->name}}<br>
+                        {{$person->name}}
+                        <br>
                     @endforeach
                 </td>
             </tr>

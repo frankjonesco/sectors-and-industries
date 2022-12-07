@@ -3,7 +3,8 @@
     <h1>Room: {{$room->name}}</h1> 
     <h1>Chore: {{$chore->name}}</h1> 
     
-    <table class="w-full">
+    <table>
+
         <thead>
             <tr>
                 <th>Persons</th>
@@ -11,6 +12,7 @@
                 <th>Chore</th>
             </tr>
         </thead>
+
         @foreach($chore->persons as $person)
             <tr>
                 <td>
@@ -24,6 +26,7 @@
                 <td>{{$chore->name}}</td>
             </tr>
         @endforeach
+        
     </table>
 
 </x-layout>

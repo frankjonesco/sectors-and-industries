@@ -18,20 +18,10 @@
                     </a>
                 </td>
                 <td>
-                    {{count($room->grouped_chores)}}
-                    @if(count($room->grouped_chores) === 1)
-                        chore
-                    @else
-                        chores
-                    @endif
+                    {{$room->labelled_chore_count}}
                 </td>
                 <td>
-                    {{count($room->grouped_chores)}}
-                    @if(count($room->grouped_chores) === 1)
-                        person
-                    @else
-                        people
-                    @endif
+                    {{$room->labelled_person_count}}
                 </td>
             </tr>
         @endforeach

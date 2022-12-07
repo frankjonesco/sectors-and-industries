@@ -18,7 +18,7 @@
                     </a>
                 </td>
                 <td>
-                    {{count($room->chore_types)}}
+                    {{count($room->grouped_chores)}}
                 </td>
                 <td>
                     {{count($room->persons)}}

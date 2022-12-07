@@ -8,7 +8,9 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>No. of Chores</th>
+                <th>Chores</th>
                 <th>No. of Persons</th>
+                <th>Persons</th>
             </tr>
         </thead>
 
@@ -24,7 +26,17 @@
                     {{count($room->grouped_chores)}}
                 </td>
                 <td>
+                    @foreach($room->grouped_chores as $chore)
+                        {{$chore->name}}<br>
+                    @endforeach
+                </td>
+                <td>
                     {{count($room->grouped_persons)}}
+                </td>
+                <td>
+                    @foreach($room->grouped_persons as $person)
+                        {{$person->name}}<br>
+                    @endforeach
                 </td>
             </tr>
         @endforeach

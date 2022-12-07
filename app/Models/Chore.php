@@ -15,14 +15,14 @@ class Chore extends Model
         return $this->belongsTo(Map::class);
     }
 
-    // Relationship to this chore's room
-    public function room(){
-        return $this->belongsToMany(
-            Room::class,
-            'maps'
-        )->withPivot('id', 'room_id', 'chore_id', 'person_id')
-        ->wherePivot('room_id', $this->pivot->room_id);
-    }
+    // // Relationship to this chore's room
+    // public function room(){
+    //     return $this->belongsToMany(
+    //         Room::class,
+    //         'maps'
+    //     )->withPivot('id', 'room_id', 'chore_id', 'person_id')
+    //     ->wherePivot('room_id', $this->pivot->room_id);
+    // }
 
     // Relationship to rooms (grouped)
     public function grouped_rooms(){
@@ -48,7 +48,5 @@ class Chore extends Model
             'maps'
         )->distinct();
     }
-    
-
     
 }

@@ -25,7 +25,7 @@ class Room extends Model
         )->distinct();
     }
 
-    // Relationship to persons
+    // Relationship to persons with pivot (ungrouped)
     public function persons(){
         return $this->belongsToMany(
             Person::class,

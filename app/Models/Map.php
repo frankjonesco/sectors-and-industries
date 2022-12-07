@@ -18,5 +18,5 @@ class Map extends Model
     public function chore(){
         return $this->belongsToMany(Chore::class, 'maps', 'id')->withPivot('id', 'room_id', 'chore_id', 'person_id');
     }
-
+    
 }

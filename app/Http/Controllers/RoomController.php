@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Room;
-use App\Models\Chore;
-use Illuminate\Http\Request;
 
 class RoomController extends Controller
 {   

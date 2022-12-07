@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Map;
 use App\Models\Chore;
-use Illuminate\Http\Request;
 
 class ChoreController extends Controller
 {

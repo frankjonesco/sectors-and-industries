@@ -28,7 +28,7 @@
         @apply border-2;
         @apply border-zinc-900;
     }
-    
+
 
     /* Text */
 
@@ -106,6 +106,25 @@
         @apply hover:border-slate-700;
         @apply hover:text-slate-800;
         @apply hover:no-underline;
+    }
+
+    .nav-flex{
+        @apply flex;
+        @apply flex-wrap;
+        @apply items-center;
+        @apply justify-between;
+        @apply mx-auto
+    }
+
+    .nav-center{
+        @apply mx-auto;
+    }
+
+    .nav-ul{
+        @apply flex;
+        @apply flex-row;
+        @apply space-x-8;
+        @apply p-4;
     }
 
 }

@@ -1,7 +1,7 @@
 <nav id="topNav">
-    <div class="flex flex-wrap items-center justify-between mx-auto">
-        <div class="mx-auto" id="navbar-default">
-            <ul class="flex flex-row space-x-8 p-4">
+    <div class="nav-flex">
+        <div class="nav-center" id="navbar-default">
+            <ul class="nav-ul">
                 <li>
                     <a href="/" aria-current="page">Home</a>
                 </li>
@@ -14,7 +14,6 @@
                 <li>
                     <a href="/persons" aria-current="page">Persons</a>
                 </li>
-          
             </ul>
         </div>
     </div>
